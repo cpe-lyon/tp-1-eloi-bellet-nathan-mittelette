@@ -3,79 +3,135 @@
 ## Exercice 2. Prise en main de l’interpréteur de commandes
 
 ### Manuel
-1. La commande which sert à localiser la fichier source associé à une commande donnée en paramètre.
+1. A l’aide du manuel, identifiez le rôle de la commande `which`
 
-2. Il faut appuyer sur la touche `/` et taper le contenu de la recherche
+> La commande which sert à localiser la fichier source associé à une commande donnée en paramètre.
 
-3. On quitte le manuel en appuyant sur la touche `q`
+2. Quand on consulte une page du manuel, comment peut-on rechercher un terme (par exemple, chercherle termeoptiondans la page de manuel de `which` ? 
 
-4. Le titre de la section est MISCELLANEOUS COMMANDS
+> Il faut appuyer sur la touche `/` et taper le contenu de la recherche
+
+3. Comment quitte-t-on le manuel ? 
+
+> On quitte le manuel en appuyant sur la touche `q`
+
+4. Chaque `section` du manuel a une première page, qui présente le contenu de la section. Aﬀicher la première page de la section 6; de quoi parle cette section? 
+
+> Le titre de la section est MISCELLANEOUS COMMANDS
 
 ### Navigation dans l’arborescence des fichiers
 
-1. `cd /var/log`
+1. Allez dans le dossier `/var/log` 
 
-2. `cd ..`
+> `cd /var/log`
 
-3. `cd /`
+2. Remontez dans le dossier parent `/var` en utilisant un chemin relatif 
 
-4. `cd -`
+> `cd ..`
 
-5. Je n'ai pas les droits pour accéder au dossier root
+3. Retournez dans le dossier personnel 
 
-6. Il me demande mon mot de passe pour vérifier que j'ai bien le droit d'accéder au dossier root. Une fois l'authentification faite je peux accéder au dossier root
+> `cd /`
 
-7. La création de l'arborescence est faîte grâce à la commande `mkdir` pour créer un répertoire, `touch`pour créer un fichier et `cd` pour naviguer à travers l'arborescence.
+4. Revenez au dossier précédent (`/var`) `sans utiliser de chemin` 
 
-8. - `rm Dossier1/Fichier1`
-    - Il ne veut pas supprimer le dossier car la commande n'est pas faîte pour supprimer un dossier mais un fichier
+> `cd -`
 
-9. C'est la commandez `mkdir`
+5. Essayez d’accéder au dossier `/root`. Que se passe-t-il ? 
 
-10. Il ne peut pas supprimer le dossier car il n'est pas vide
+> Je n'ai pas les droits pour accéder au dossier root
 
-11. Il faut utiliser l'option `--ignore-fail-on-non-empty`
+6. Essayez la commande `sudo cd /root`. Que se passe-t-il ? Expliquez.
+
+> Il me demande mon mot de passe pour vérifier que j'ai bien le droit d'accéder au dossier root. Une fois l'authentification faite je peux accéder au dossier root
+
+7. à partir de votre dossier personnel, créez l’arborescence suivante : 
+
+
+
+> La création de l'arborescence est faîte grâce à la commande `mkdir` pour créer un répertoire, `touch`pour créer un fichier et `cd` pour naviguer à travers l'arborescence.
+
+8. Revenez dans votre dossier personnel. à l’aide de la commande `rm`, essayez de supprimer `Fichier1`, puis `Dossier1`. Que se passe-t-il ?
+
+>  - `rm Dossier1/Fichier1`
+>  - Il ne veut pas supprimer le dossier car la commande n'est pas faîte pour supprimer un dossier mais un fichier
+
+9. Quelle commande permet de supprimer un dossier?
+
+> C'est la commandez `rmdir`
+
+10. Que se passe-t-il quand on applique cette commande à `Dossier2` ?
+
+> Il ne peut pas supprimer le dossier car il n'est pas vide
+
+11. Comment supprimer en une seule commande `Dossier2` et son contenu?
+
+> Il faut utiliser l'option `--ignore-fail-on-non-empty`
 
 ### Commandes importantes
 
-1. C'est la commande `date` qui permet d'afficher l'heure ainsi que la date
+1. Quelle commande permet d’aﬀicher l’heure ? A quoi sert la commande `time` ? 
 
-2. Ça permet de résumer les ressources systemes utiliser par chaque utilisateur
+> C'est la commande `date` qui permet d'afficher l'heure ainsi que la date
 
-3. La commande `ls` se trouve dans le dossier `/bin` soit l'arboresence `/bin/ls`
+2. Dans votre dossier personnel, tapez successivement les commandes `ls` puis `la`. Que peut-on en déduire sur les fichiers commençant par un point ?
 
-4. Il n'existe pas de d'entrée manuelle pour la commande `ll`, Après execution de la commande alias ll on s'aperçois que la commande ll est un alias qui effectue la commande `ls -alF`
+> Ça permet de résumer les ressources systemes utiliser par chaque utilisateur
 
-5. C'est la commande `ls /bin`
+3. Où se situe le programme `ls` ? 
 
-6. Elle affiche le contenu du dossier parent
+> La commande `ls` se trouve dans le dossier `/bin` soit l'arboresence `/bin/ls`
 
-7. C'est la commande `pwd`
+4. Essayez la commande `ll`. Existe-t-il une entrée de manuel pour cette commande ? Utilisez les commandes `alias `ou `alias` pour en savoir plus sur la nature de cette commande. 
 
-8. Cette commande permet d'écrire dans le fichier plop le contenu suivant : `yo`
+> Il n'existe pas de d'entrée manuelle pour la commande `ll`, Après execution de la commande alias ll on s'aperçois que la commande ll est un alias qui effectue la commande `ls -alF`
 
-9. Cette commande permet d'écrire dans le fichier plop le contenu suivant : `yoyo`
+5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier `/bin` ? 
 
-10. - La commande `file` permet de déterminer le type du fichier pointé
-    - `file plop` permet de savoir que c'est un fichier de type ASCII
+> C'est la commande `ls /bin`
 
-11. - `echo 'Hello Toto !' > toto`
-    - `ln toto titi`
-    - `echo 'Hello' > toto`
-    - `cat titi`
-    - On remarque que le contenu de titi a changé
-    - Une fois que toto est supprimé le contenu de titi reste inchangé
+6. Que fait la commande `ls` ? 
 
-12. - `echo 'Hello titi !' > titi`
-    - `ln -s titi tutu`
-    - `echo 'Hello' > tutu`
-    - `cat titi`
-    - On remarque que le contenu de titi a changé
-    - `echo 'Hello Test' > titi`
-    - `cat tutu`
-    - On remarque que le contenu de tutu a changé
-    - `rm titi`
-    - Une fois que titi est supprimé il n'est plus possible de lire le contenu de tutu
+> Elle affiche le contenu du dossier parent
+
+7. Quelle commande donne le chemin complet du dossier courant ? 
+
+> C'est la commande `pwd`
+
+8. Que fait la commande `echo 'yo' > plop ` exécutée 2 fois ? 
+
+> Cette commande permet d'écrire dans le fichier plop le contenu suivant : `yo`
+
+9. Que fait la commande `echo 'yo' >> plo` pexécutée 2 fois? 
+
+> Cette commande permet d'écrire dans le fichier plop le contenu suivant : `yoyo`
+
+10. A quoi sert la commande `file` ? Essayez la sur des fichiers de types différents
+
+> - La commande `file` permet de déterminer le type du fichier pointé
+> - `file plop` permet de savoir que c'est un fichier de type ASCII
+
+11. Créez un fichier `toto` qui contient la chaîne `Hello Toto !`. Créer ensuite un lien `titi` vers ce fichier avec la commande `ln toto titi`. Modifiez à présent le contenu de `toto` et aﬀichez le contenu de `titi` : Qu’observe-t-on ? Supprimez le fichier `toto`. Quelle conséquence cela a-t-il sur `titi`?
+
+>- `echo 'Hello Toto !' > toto`
+>- `ln toto titi`
+>- `echo 'Hello' > toto`
+>- `cat titi`
+>- On remarque que le contenu de titi a changé
+>- Une fois que toto est supprimé le contenu de titi reste inchangé
+
+12. Créez à présent un lien symbolique `tutu` sur `titi` avec la commande `ln -s titi tutu`. Modifiez le contenu de `titi`; quelle conséquence pour `tutu` ? Et inversement? Supprimez le fichier `titi`; quelleconséquence cela a-t-il sur `tutu`? 
+
+>- `echo 'Hello titi !' > titi`
+>- `ln -s titi tutu`
+>- `echo 'Hello' > tutu`
+>- `cat titi`
+>- On remarque que le contenu de titi a changé
+>- `echo 'Hello Test' > titi`
+>- `cat tutu`
+>- On remarque que le contenu de tutu a changé
+>- `rm titi`
+>- Une fois que titi est supprimé il n'est plus possible de lire le contenu de tutu
 
 13. - `cat /var/log/syslog`
     - La commande qui permet d'interromptre le processus est `Ctrl + C`
