@@ -1,3 +1,5 @@
+## Nathan Mittelette - Eloi Bellet
+
 # TP1
 
 ## Exercice 2. Prise en main de l’interpréteur de commandes
@@ -7,37 +9,37 @@
 
 > La commande which sert à localiser la fichier source associé à une commande donnée en paramètre.
 
-2. Quand on consulte une page du manuel, comment peut-on rechercher un terme (par exemple, chercherle termeoptiondans la page de manuel de `which` ? 
+2. Quand on consulte une page du manuel, comment peut-on rechercher un terme (par exemple, chercherle termeoptiondans la page de manuel de `which` ?
 
 > Il faut appuyer sur la touche `/` et taper le contenu de la recherche
 
-3. Comment quitte-t-on le manuel ? 
+3. Comment quitte-t-on le manuel ?
 
 > On quitte le manuel en appuyant sur la touche `q`
 
-4. Chaque `section` du manuel a une première page, qui présente le contenu de la section. Aﬀicher la première page de la section 6; de quoi parle cette section? 
+4. Chaque `section` du manuel a une première page, qui présente le contenu de la section. Aﬀicher la première page de la section 6; de quoi parle cette section?
 
 > Le titre de la section est MISCELLANEOUS COMMANDS
 
 ### Navigation dans l’arborescence des fichiers
 
-1. Allez dans le dossier `/var/log` 
+1. Allez dans le dossier `/var/log`
 
 > `cd /var/log`
 
-2. Remontez dans le dossier parent `/var` en utilisant un chemin relatif 
+2. Remontez dans le dossier parent `/var` en utilisant un chemin relatif
 
 > `cd ..`
 
-3. Retournez dans le dossier personnel 
+3. Retournez dans le dossier personnel
 
 > `cd /`
 
-4. Revenez au dossier précédent (`/var`) `sans utiliser de chemin` 
+4. Revenez au dossier précédent (`/var`) `sans utiliser de chemin`
 
 > `cd -`
 
-5. Essayez d’accéder au dossier `/root`. Que se passe-t-il ? 
+5. Essayez d’accéder au dossier `/root`. Que se passe-t-il ?
 
 > Je n'ai pas les droits pour accéder au dossier root
 
@@ -45,7 +47,7 @@
 
 > Il me demande mon mot de passe pour vérifier que j'ai bien le droit d'accéder au dossier root. Une fois l'authentification faite je peux accéder au dossier root
 
-7. à partir de votre dossier personnel, créez l’arborescence suivante : 
+7. à partir de votre dossier personnel, créez l’arborescence suivante :
 
 
 
@@ -70,7 +72,7 @@
 
 ### Commandes importantes
 
-1. Quelle commande permet d’aﬀicher l’heure ? A quoi sert la commande `time` ? 
+1. Quelle commande permet d’aﬀicher l’heure ? A quoi sert la commande `time` ?
 
 > C'est la commande `date` qui permet d'afficher l'heure ainsi que la date
 
@@ -78,31 +80,31 @@
 
 > Ça permet de résumer les ressources systemes utiliser par chaque utilisateur
 
-3. Où se situe le programme `ls` ? 
+3. Où se situe le programme `ls` ?
 
 > La commande `ls` se trouve dans le dossier `/bin` soit l'arboresence `/bin/ls`
 
-4. Essayez la commande `ll`. Existe-t-il une entrée de manuel pour cette commande ? Utilisez les commandes `alias `ou `alias` pour en savoir plus sur la nature de cette commande. 
+4. Essayez la commande `ll`. Existe-t-il une entrée de manuel pour cette commande ? Utilisez les commandes `alias `ou `alias` pour en savoir plus sur la nature de cette commande.
 
 > Il n'existe pas de d'entrée manuelle pour la commande `ll`, Après execution de la commande alias ll on s'aperçois que la commande ll est un alias qui effectue la commande `ls -alF`
 
-5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier `/bin` ? 
+5. Quelle commande permet d’aﬀicher les fichiers contenus dans le dossier `/bin` ?
 
 > C'est la commande `ls /bin`
 
-6. Que fait la commande `ls` ? 
+6. Que fait la commande `ls` ?
 
 > Elle affiche le contenu du dossier parent
 
-7. Quelle commande donne le chemin complet du dossier courant ? 
+7. Quelle commande donne le chemin complet du dossier courant ?
 
 > C'est la commande `pwd`
 
-8. Que fait la commande `echo 'yo' > plop ` exécutée 2 fois ? 
+8. Que fait la commande `echo 'yo' > plop ` exécutée 2 fois ?
 
 > Cette commande permet d'écrire dans le fichier plop le contenu suivant : `yo`
 
-9. Que fait la commande `echo 'yo' >> plo` pexécutée 2 fois? 
+9. Que fait la commande `echo 'yo' >> plo` pexécutée 2 fois?
 
 > Cette commande permet d'écrire dans le fichier plop le contenu suivant : `yoyo`
 
@@ -120,7 +122,7 @@
 >- On remarque que le contenu de titi a changé
 >- Une fois que toto est supprimé le contenu de titi reste inchangé
 
-12. Créez à présent un lien symbolique `tutu` sur `titi` avec la commande `ln -s titi tutu`. Modifiez le contenu de `titi`; quelle conséquence pour `tutu` ? Et inversement? Supprimez le fichier `titi`; quelleconséquence cela a-t-il sur `tutu`? 
+12. Créez à présent un lien symbolique `tutu` sur `titi` avec la commande `ln -s titi tutu`. Modifiez le contenu de `titi`; quelle conséquence pour `tutu` ? Et inversement? Supprimez le fichier `titi`; quelleconséquence cela a-t-il sur `tutu`?
 
 >- `echo 'Hello titi !' > titi`
 >- `ln -s titi tutu`
